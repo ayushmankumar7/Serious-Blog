@@ -70,7 +70,7 @@ export default function MyModal() {
                   <p className="text-sm text-gray-500 text-center">
                       This site may have blogs which might hurt your sentiments, believes and feelings. You are completely liable for consuming any content from this website. You need to have a open mind before reading any of these blogs.<br/>
                       The Website is 100% Safe to use though. No Ads, No Phishing or any harmful downloads. <br/>
-                      Ready to enlight yourself? Let's proceed!
+                      Ready to enlight yourself? Let us proceed!
                   </p>
                 </div>
 
