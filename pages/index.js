@@ -16,8 +16,8 @@ export default function Home(){
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <NavBar />
       <div className="container flex-1 mx-auto  max-w-xl">
-        <NavBar />
         <ImageCard image={rocket} title="Isn't this a nice image?" sub = "This is the nicest thing you are gonna see here" />        
 
         <div className="grid place-items-center py-5">
