@@ -36,7 +36,7 @@ export default function Home(){
         <BlogCard image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" />      
         <BlogCard image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" />      
 
-        <Link href="/blogs"><span className="text-white cursor-pointer py-3">View All >></span></Link>
+        <Link href="/blogs"><span className="text-white cursor-pointer py-3">View All.. </span></Link>
 
       </div>
     </div>
