@@ -1,7 +1,18 @@
 import NavBar from "../../components/NavBar";
 import BlogCard from "../../components/BlogCard";
+import { blogs } from "../../blogs/00001";
 
-export default function Blogs(props){
+export const getStaticProps = async() => {
+    return {
+        props: {
+            bloglist: blogs
+        },
+    }
+}
+
+
+
+export default function Blogs({ bloglist }){
 
     return (
         <div>
@@ -20,14 +31,19 @@ export default function Blogs(props){
                     </div>
                 </div>
 
-                <BlogCard 
-                    image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" 
-                    link=""
-                />      
-                <BlogCard 
-                    image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" 
-                    link=""
-                />  
+                {
+                    bloglist.map(blog => (
+                        <BlogCard 
+                            key={blog.id}
+                            title={blog.title} 
+                            subtext = {blog.subtext} 
+                            image={blog.images[0]} 
+                            link = {"blogs/" + blog.id.toString()}/>
+                    ))
+
+                }
+
+                 
 
 
             </div>

@@ -2,13 +2,13 @@ import Link from "next/dist/client/link";
 
 export default function BlogCard(props){
     return (
-        <Link href = "#">
+        <Link href = {props.link}>
             <div className="py-4 rounded overflow-hidden shadow-lg m-2 cursor-pointer">
                 <img className="w-full object-cover object-top h-32" src={props.image} alt="Sunset in the mountains" />
                 <div className="px-6 py-4 bg-gray-800">
-                    <div className="font-bold text-white text-xl mb-2">The Coldest Sunset</div>
+                    <div className="font-bold text-white text-xl mb-2">{props.title}</div>
                     <p className="text-white text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                    {props.subtext}
                     </p>
                 </div>
                 <div className="px-6 pt-4 pb-2 border-inherit">

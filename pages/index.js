@@ -33,8 +33,15 @@ export default function Home(){
         <ImageCard image={elephants} title="Not Anymore" sub="Please Read the Disclaimer before proceeding..." />  
         <Message text="I hope you have read the disclaimer" />
         <Title text="Latest Blogs" />
-        <BlogCard image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" />      
-        <BlogCard image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" />      
+        <BlogCard 
+            image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" 
+            link="blogs/1"
+        />      
+
+        <BlogCard 
+            image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" 
+            link="blogs/2"
+        />       
 
         <Link href="/blogs"><span className="text-white cursor-pointer py-3">View All.. </span></Link>
 
