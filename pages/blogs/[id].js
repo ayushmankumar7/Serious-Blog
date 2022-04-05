@@ -6,7 +6,6 @@ import { blogs }  from "../../blogs/00001";
 
 export const getStaticProps = async( { params } ) => {
 
-    console.log(blogs)
     const blog = blogs.filter(b => b.id.toString() === params.id)
     return {
         props: {

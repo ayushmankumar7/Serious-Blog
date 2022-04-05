@@ -7,8 +7,19 @@ import elephants from '../public/elephants.webp'
 import Message from "../components/Message";
 import Title from "../components/Title";
 import Link from "next/link";
+import { blogs } from "../blogs/00001";
 
-export default function Home(){
+export const getStaticProps = async() => {
+  return {
+      props: {
+          bloglist: blogs
+      },
+  }
+}
+
+
+
+export default function Home({ bloglist }){
   return (
     <div>
       <Head>
@@ -33,15 +44,17 @@ export default function Home(){
         <ImageCard image={elephants} title="Not Anymore" sub="Please Read the Disclaimer before proceeding..." />  
         <Message text="I hope you have read the disclaimer" />
         <Title text="Latest Blogs" />
-        <BlogCard 
-            image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" 
-            link="blogs/1"
-        />      
+        {
+            bloglist.map(blog => (
+                <BlogCard 
+                    key={blog.id}
+                    title={blog.title} 
+                    subtext = {blog.subtext} 
+                    image={blog.images[0]} 
+                    link = {"blogs/" + blog.id.toString()}/>
+            ))
 
-        <BlogCard 
-            image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" 
-            link="blogs/2"
-        />       
+        } 
 
         <Link href="/blogs"><span className="text-white cursor-pointer py-3">View All.. </span></Link>
 
