@@ -6,7 +6,7 @@ export default function NavBar(){
         <div className="sticky top-0 z-50 rounded-lg m-2">
             <nav className="flex justify-between items-center px-2 py-4">
                 <div className="left-side">
-                    <span className="text-white font-bold">Serious Blog</span>
+                   <Link href="/" ><span className="text-white font-bold cursor-pointer">Serious Blog</span></Link> 
                 </div>
                 {/* <div className="right-side">
                     Disclaimer

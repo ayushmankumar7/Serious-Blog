@@ -6,6 +6,7 @@ import rocket from '../public/rocket.webp'
 import elephants from '../public/elephants.webp'
 import Message from "../components/Message";
 import Title from "../components/Title";
+import Link from "next/link";
 
 export default function Home(){
   return (
@@ -33,7 +34,9 @@ export default function Home(){
         <Message text="I hope you have read the disclaimer" />
         <Title text="Latest Blogs" />
         <BlogCard image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" />      
+        <BlogCard image="https://cdn.pixabay.com/photo/2022/03/25/17/54/sakura-7091532_960_720.jpg" />      
 
+        <Link href="/blogs"><span className="text-white cursor-pointer py-3">View All >></span></Link>
 
       </div>
     </div>
