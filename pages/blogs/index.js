@@ -1,6 +1,7 @@
 import NavBar from "../../components/NavBar";
 import BlogCard from "../../components/BlogCard";
 import { blogs } from "../../blogs/00001";
+import Footer from "../../components/Footer";
 
 export const getStaticProps = async() => {
     return {
@@ -43,10 +44,8 @@ export default function Blogs({ bloglist }){
 
                 }
 
-                 
-
-
             </div>
+            <Footer />
         </div>
     )
 }

@@ -8,6 +8,7 @@ import Message from "../components/Message";
 import Title from "../components/Title";
 import Link from "next/link";
 import { blogs } from "../blogs/00001";
+import Footer from "../components/Footer";
 
 export const getStaticProps = async() => {
   return {
@@ -59,6 +60,9 @@ export default function Home({ bloglist }){
         <Link href="/blogs"><span className="text-white cursor-pointer py-3">View All.. </span></Link>
 
       </div>
+      <br/>
+      <Footer />
+
     </div>
   )
 }
